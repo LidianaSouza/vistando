@@ -1,0 +1,1 @@
+Arquivos para estilização das páginas. Não há arquivos .py aqui. (por enquanto)

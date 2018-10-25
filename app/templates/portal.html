@@ -1,0 +1,37 @@
+{%extends 'baseProfessor.html'%}
+
+{%block content%}
+
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+			<form action="/criarSala" method="POST" class="contact100-form validate-form">
+				{{form.csrf_token}}
+			<!--	<span class="contact100-form-title">
+					{{name}}
+				</span> -->
+				<button class="contact100-form-btn" type="submit">
+						<span>
+							Criar Sala
+						</span>
+				</button>
+				<br>
+				<br>
+				{%
+				  for i in s: %}
+				  <span class="contact100-form-title">
+				     <a href="/sala">{%print(i)%}</a>
+				  </span>
+				 {%endfor%}
+
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+
+
+{%endblock%}

@@ -1,0 +1,57 @@
+{%extends 'baseAluno.html'%}
+
+{%block content%}
+  <body>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Busque sua sala</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form action="/resultAluno" method="POST">
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <!-- <input type="text" class="form-control form-control-lg" placeholder="Entre com o código da sala">-->
+                  {{form.cod_sala(class="form-control", placeholder="código da sala")}}
+                </div>
+                <div class="col-12 col-md-3">
+                  <button type="submit" class="btn btn-block btn-lg btn-primary">Buscar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <h3>Sobre nós</h3>
+              <p class="lead mb-0">Somos alunos do curso de Engenharia de Computação e Informação na Universidade Federal do rio de Janeiro. Essa projeto coresponde à disciplina Linguagens de Programação com o professor Claudio Miceli.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <h3>O que é o projeto? </h3>
+              <p class="lead mb-0"> Com esse projeto, estamos propondo uma nova maneira de realizar vista de prova na universidade.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <h3>Motivação</h3>
+              <p class="lead mb-0"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {%endblock%}

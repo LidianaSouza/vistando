@@ -1,0 +1,49 @@
+{%extends 'baseProfessor.html'%}
+
+{%block content%}
+
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" enctype=multipart/form-data>
+				<div class="wrap-input100 validate-input" data-validate="Insira o DRE">
+					<input class="input100" type="text" name="dre" placeholder="DRE">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Anexe um arquivo">
+					<input class="input100" type="file" name="prova" placeholder="Prova">
+					<span class="focus-input100"></span>
+				</div>
+				<button class="contact100-form-btn">
+						<span>
+							Enviar prova
+						</span>
+				</button>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+</body>
+</html>
+
+{%endblock%}

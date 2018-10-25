@@ -1,0 +1,7 @@
+<form  method="POST">
+{{form.csrf_token}}
+<p>{{form.titulo(class="form-control", placeholder="Nome da sala")}}</p>
+<p>{{form.cod_sala(class="form-control", placeholder="Código da sala")}}</p>
+<p>{{form.senha(class="form-control", placeholder="Senha da sala")}}</p>
+<button type="submit">criar</button>
+</form>

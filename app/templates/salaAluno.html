@@ -1,0 +1,30 @@
+{%extends 'baseAluno.html'%}
+
+{%block content%}
+
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+			<!--<form action="/upProva" method="POST" class="contact100-form validate-form"> -->
+				{{form.csrf_token}}
+				<span class="contact100-form-title">
+				</span>
+
+				<br>
+				<br>
+				{%
+				  for i in s: %}
+				  <span class="contact100-form-title">
+				     <a href="/aluno">{%print(i)%}</a>
+				  </span>
+				 {%endfor%}
+
+			<!-- </form> -->
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+{%endblock%}
