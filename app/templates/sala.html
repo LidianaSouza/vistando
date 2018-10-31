@@ -5,10 +5,11 @@
 	<div class="container-contact100">
 
 		<div class="wrap-contact100">
-			<form action="/upProva" method="POST" class="contact100-form validate-form">
 				{{form.csrf_token}}
 				<span class="contact100-form-title">
+					{%print(t.titulo+" - código "+t.cod_sala)%}
 				</span>
+				<form action="/sala" method="POST" class="contact100-form validate-form">
 				<button class="contact100-form-btn" type="submit">
 						<span>
 							Adicionar prova
@@ -16,14 +17,30 @@
 				</button>
 				<br>
 				<br>
-				{%
-				  for i in s: %}
-				  <span class="contact100-form-title">
-				     <a href="/aluno">{%print(i)%}</a>
-				  </span>
-				 {%endfor%}
+				</form>
 
+			<form method="POST" class="contact100-form validate-form" action="/pedidosProf">
+			<button class="contact100-form-btn" type="submit">
+				Pedidos de revisão
+			</button>
+			<br>
+			<br>
 			</form>
+
+				{%for i in s: %}
+				<div class="wrap-contact100">
+					<br>
+			<!--	<form action="/aluno/{{i.dre}}" method="GET" class="contact100-form validate-form"> -->
+					<button type="submit" class="btn btn-block btn-lg btn-primary">{%print(i.dre)%}</button>
+			<!--</form>-->
+			<br>
+			<form action="/excluirAluno/{{i.dre}}" method="POST" class="contact100-form-btn">
+				<button type="submit" class="btn btn-block btn-lg btn-primary">Excluir</button>
+			</form>
+			<br>
+			</div>
+			{%endfor%}
+
 		</div>
 	</div>
 

@@ -1,7 +1,54 @@
-<form  method="POST">
-{{form.csrf_token}}
-<p>{{form.titulo(class="form-control", placeholder="Nome da sala")}}</p>
-<p>{{form.cod_sala(class="form-control", placeholder="Código da sala")}}</p>
-<p>{{form.senha(class="form-control", placeholder="Senha da sala")}}</p>
-<button type="submit">criar</button>
-</form>
+{%extends 'baseProfessor.html'%}
+
+{%block content%}
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="/criarSala" method="POST">
+					{{form.csrf_token}}
+					<span class="login100-form-title p-b-26">
+						Crial sala
+					</span>
+					<div class="wrap-input100">
+						<!-- <input class="input100" type="text" name="siape"> -->
+						{{form.titulo(class="form-control", placeholder="Nome da sala")}}
+					<!--	<span class="focus-input100" data-placeholder="SIAPE"></span> -->
+					</div>
+
+					<div class="wrap-input100">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<!--<input class="input100" type="password" name="senha">-->
+						{{form.cod_sala(class="form-control", placeholder="Código da sala")}}
+						<!-- <span class="focus-input100" data-placeholder="Senha"></span> -->
+					</div>
+
+          <div class="wrap-input100">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<!--<input class="input100" type="password" name="senha">-->
+						{{form.senha(class="form-control", placeholder="Senha da sala")}}
+						<!-- <span class="focus-input100" data-placeholder="Senha"></span> -->
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" type="submit">
+								Criar
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+
+	    {%endblock%}

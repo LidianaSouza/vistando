@@ -1,0 +1,34 @@
+{%extends 'baseProfessor.html'%}
+
+{%block content%}
+
+<div class="container-contact100">
+  <span class="contact100-form-title">
+    {%print(t.titulo+" - código "+t.cod_sala)%}
+  </span>
+  <div>
+  <div class="container-contact100">
+  <div class="wrap-contact100">
+    {%for i in p:%}
+    {%for j in c:%}
+      {%if i.dre == j.dre:%}
+      <span class="contact100-form-title">
+        DRE: {%print(i.dre)%}
+        <br>
+        {%print(i.pedido)%}
+        <br>
+      </span>
+      <form action="/revisado/{{i.pedido}}" method="POST" class="contact100-form validate-form">
+      <button class="contact100-form-btn" type="submit">
+            Revisado
+      </button>
+      <br>
+      <br>
+      </form>
+      {%endif%}
+      {%endfor%}
+      {%endfor%}
+</div>
+</div>
+
+{%endblock%}

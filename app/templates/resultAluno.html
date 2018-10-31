@@ -5,21 +5,17 @@
 	<div class="container-contact100">
 
 		<div class="wrap-contact100">
-			<form action="/upProva" method="POST" class="contact100-form validate-form">
+			<form action="/resultAluno" method="POST" class="contact100-form validate-form">
 				{{form.csrf_token}}
 				<span class="contact100-form-title">
 				</span>
 
 				<br>
 				<br>
-				{%
-				  for i in s: %}
-				  <span class="contact100-form-title">
-				     <a href="/salaAluno">{%print(i)%}</a>
-				  </span>
-				 {%endfor%}
-
-			</form>
+					<div class="col-12 col-md-3">
+						<button type="submit" class="btn btn-block btn-lg btn-primary">{%print(s)%}</button>
+					</div>
+		</form>
 		</div>
 	</div>
 

@@ -5,7 +5,7 @@
 	<div class="container-contact100">
 
 		<div class="wrap-contact100">
-			<form action="/criarSala" method="POST" class="contact100-form validate-form">
+			<form action="/portal" method="POST" class="contact100-form validate-form">
 				{{form.csrf_token}}
 			<!--	<span class="contact100-form-title">
 					{{name}}
@@ -17,14 +17,16 @@
 				</button>
 				<br>
 				<br>
-				{%
-				  for i in s: %}
-				  <span class="contact100-form-title">
-				     <a href="/sala">{%print(i)%}</a>
-				  </span>
-				 {%endfor%}
-
 			</form>
+			{%for i in s: %}
+
+			<form action="/cod/{{i.cod_sala}}" method="GET" class="contact100-form validate-form">
+					<button type="submit" class="btn btn-block btn-lg btn-primary">{%print(i.titulo)%}</button>
+			</form>
+			<form action="/excluirSala/{{i.cod_sala}}" method="GET" class="contact100-form validate-form">
+					<button type="submit" class="btn btn-block btn-lg btn-primary">Excluir</button>
+			</form>
+			{%endfor%}
 		</div>
 	</div>
 

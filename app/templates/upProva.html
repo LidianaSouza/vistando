@@ -5,16 +5,18 @@
 	<div class="container-contact100">
 
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" enctype=multipart/form-data>
-				<div class="wrap-input100 validate-input" data-validate="Insira o DRE">
-					<input class="input100" type="text" name="dre" placeholder="DRE">
+			<form class="contact100-form validate-form" enctype="multipart/form-data" method="POST" action="/upProva">
+				<div  data-validate="Insira o DRE">
+					<!--<input class="input100" type="text" name="dre" placeholder="DRE">-->
+					{{form.dre(class="form-control", placeholder="DRE")}}
 					<span class="focus-input100"></span>
 				</div>
-				<div class="wrap-input100 validate-input" data-validate="Anexe um arquivo">
-					<input class="input100" type="file" name="prova" placeholder="Prova">
+				<div " data-validate="Anexe um arquivo">
+					<!--{{form.prova(class="wrap-input100 validate-inputl", placeholder="código da sala")}}<input class="input100" type="file" name="prova" placeholder="Prova">-->
+					{{form.prova(class="form-control", placeholder="arquivo")}}
 					<span class="focus-input100"></span>
 				</div>
-				<button class="contact100-form-btn">
+				<button class="contact100-form-btn" type="submit">
 						<span>
 							Enviar prova
 						</span>
