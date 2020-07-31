@@ -4,7 +4,7 @@
 
 Implementar um Ambiente virtual para realizar vista de prova utilizando Python e Flask. O projeto é referente à disciplina Linguagens de Programação/UFRJ.
 
-#### Glossário
+##### Glossário
 
 - venv: ambiente virtual onde o flask está instalado mais suas extensões
 
@@ -14,7 +14,7 @@ Implementar um Ambiente virtual para realizar vista de prova utilizando Python e
 
 - storage.bd: banco de dados criado pelo sqlite
 
-#### Considerações
+##### Considerações
 
 - Este README foi propriamente elaborado após 2 anos da conclusão da disciplina. Qualquer inconsistência no código, me desculpe :)
 - O Front-End foi desenvolvido pelo parceiro de dupla, William. O Back-end é de minha autoria.
